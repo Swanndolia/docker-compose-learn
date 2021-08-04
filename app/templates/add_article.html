@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% block title %}
+        <title>Document</title>
+        {% endblock %}
+    </head>
+
+    <body>
+
+        {% block content %}
+
+        <form action="/insert_article" method="post">
+
+            <label> id
+                <input type="text" name="id">
+            </label>
+            <label> nom de l'article
+                <input type="text" name="nom">
+            </label>
+            <label> prix achat
+                <input type="text" name="prix">
+            </label>
+            <label> volume
+                <input type="text" name="volume">
+            </label>
+
+            <input type="submit" value="envoyer">
+
+        </form>
+
+
+
+        <a href="http://localhost:5000"> lien vers page d'accueil</a>
+
+        {% endblock %}
+    </body>
+
+</html>

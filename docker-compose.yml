@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+  docker-mySQL:
+    image: mysql:8.0.26
+    container_name: mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+    volumes:
+      - .db_data:/var/lib/mysql
+
+  docker-adminer-mySQL:
+    image: adminer:4.8.1
+    container_name: adminer
+    restart: unless-stopped
+    ports:
+      - 8000:8080
+
+  docker-flask-custom:
+    build:
+      container_name: flask
+      restart: unless-stopped
+      ports:
+        - 5000:5000
+    
