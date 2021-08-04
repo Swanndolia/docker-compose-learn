@@ -3,8 +3,8 @@ FROM python
 WORKDIR /usr/src/app
 
 RUN pip install flask
-RUN pip install mysql
+RUN pip install mysql-connector-python
 
-COPY app ./
+COPY . ./
 
 CMD ["flask", "run", "--host=0.0.0.0"]

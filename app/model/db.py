@@ -6,7 +6,7 @@ class DB(ABC):
         host='mysql:3306',
         user='root',
         password='toor',
-        database='db',
+        database='',
         port=3306
     )
 
