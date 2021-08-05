@@ -5,7 +5,7 @@ from flask.templating import render_template
 
 app = Flask(__name__)
 user = userModel()
-
+user.create_table()
 
 @app.route('/')
 def hello():
