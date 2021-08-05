@@ -17,14 +17,14 @@
     <ul>
         {% for i in data %}
         <li>
-            <a href="/update_article/{{i.ID_ARTICLE}}"><button>{{ i }}</button></a>
-            <a href="/delete_article/{{i.ID_ARTICLE}}"><button>X</button></a>
+            <a href="/update_user/{{i.ID_USER}}"><button>{{ i }}</button></a>
+            <a href="/delete_user/{{i.ID_USER}}"><button>X</button></a>
         </li>
         {% endfor %}
 
     </ul>
 
-    <a href="/add_article_template"> lien vers add</a>
+    <a href="/add_user_template"> lien vers add</a>
 
     {% endblock %}
 
